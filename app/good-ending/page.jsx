@@ -16,8 +16,8 @@ export const page = () => {
       <main className={'bg-green'}>
         <div className={'container'}>
           <div className={'wrapper'}>
-            <h1 className={'title'}>And the award for the best parent goes to...</h1>
-            <p className={'info'}>YOU! If you are looking for more guidance on how to approach this topic with your children, check out https://www.helderopvoeden.nl/</p>
+            <h1 className={'title'} style={{fontSize: "60px"}}>And the award for the best parent goes to...</h1>
+            <p className={'info'}><a style={{fontWeight: "bold"}}>YOU!</a><br></br><br></br> If you are looking for more guidance on how to approach this topic with your children, check out https://www.helderopvoeden.nl/</p>
             <img style={{width: "200px", imageRendering: "pixelated"}} src='../images/qr.gif'></img>
           </div>
           <Link href={'/'}>
