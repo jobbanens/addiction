@@ -4,17 +4,27 @@
   margin: 0;
 }
 
+.fadeIn {
+  animation: fadeInAnimation 0.2s ease;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 main {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #FAFAFA;
-  color: #0A0A0A;
+  color: #181818;
   font-family: Inter, sans-serif;
   font-size: 24px;
   line-height: 1.25;
   font-weight: 600;
   padding: 128px;
+  padding-top: 96px;
 }
 
 @media only screen and (max-width: 1365px) {
@@ -39,7 +49,7 @@ button {
   padding: 24px 48px;
   border-radius: 32px;
   border: none;
-  background-color: #0A0A0A;
+  background-color: #181818;
   color: #FAFAFA;
 }
 
@@ -68,12 +78,15 @@ h2 {
   font-size: 24px;
   align-self: stretch;
   margin-top: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .helper {
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 30px;
   line-height: 1;
-  margin-top: auto;
 }
 
 .container {
@@ -96,21 +109,21 @@ h2 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  justify-content: space-between;
 }
 
 .option {
+  
   position: relative;
   text-align: center;
-  width:calc((100% - 32px) / 3);
+  width:calc((100% - 32px) / 3.5);
   height: 100%;
   aspect-ratio: 1 / 1;
-  border: 1px solid #0A0A0A;
   border-radius: 32px;
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -125,15 +138,36 @@ h2 {
 }
 
 .bg-yellow {
-  background-color: #FAF4BE;
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 0px 10px rgba(250, 244, 190, 0.5);
+  background-color: rgba(250, 244, 190, 0.8);
+  /* border: 10px solid rgba(250, 244, 190, 0.8); */
 }
 
 .bg-green {
-  background-color: #BEFAC4;
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 0px 10px rgba(190, 250, 196, 0.5);
+  background-color: rgba(190, 250, 196, 0.8);
+  /* border: 10px solid rgba(190, 250, 196, 0.8); */
 }
 
 .bg-blue {
-  background-color: #BEE4FA;
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 0px 10px rgba(190, 228, 250, 0.5);
+  background-color: rgba(190, 228, 250, 0.8);
+  /* border: 10px solid rgba(190, 228, 250, 0.8); */
+}
+
+.bg-yellow.chosen {
+  box-shadow: 0px 0px 0px 20px rgba(250, 244, 190, 0.5);
+}
+
+.bg-green.chosen {
+  box-shadow: 0px 0px 0px 20px rgba(190, 250, 196, 0.5);
+}
+
+.bg-blue.chosen {
+  box-shadow: 0px 0px 0px 20px rgba(190, 228, 250, 0.5);
 }
 
 .bg-red {
