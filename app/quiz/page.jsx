@@ -104,8 +104,8 @@ export const page = () => {
           flexDirection: "column"
         }}
       >
-      <div style={{ height: "224px", width: "100%", backgroundColor: "rgba(250, 250, 250, 0.7)"}}></div>
-      {showResult ? <div className="fadeIn" style={{ height: "371px", width: "100%", backgroundColor: "rgba(250, 250, 250, 0.7)", marginTop: "auto"}}></div> : ""}
+      <div style={{ height: "224px", width: "100%", backgroundColor: "rgba(250, 250, 250, 0.7)", boxShadow: "0 0 10px 0px rgba(0,0,0,.5)"}}></div>
+      {showResult ? <div className="fadeIn" style={{ height: "371px", width: "100%", backgroundColor: "rgba(250, 250, 250, 0.7)", marginTop: "auto", boxShadow: "0 0 10px 0px rgba(0,0,0,.5)"}}></div> : ""}
       </div>
       <div className={"container"}>
         <div className={"wrapper"}>
